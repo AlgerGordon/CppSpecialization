@@ -1,0 +1,11 @@
+project(Week_3)
+
+add_executable(Sandbox Sandbox.cpp)
+add_executable(ModuleSort ModuleSort.cpp)
+add_executable(Incognizable Incognizable.cpp)
+add_executable(ReversibleString ReversibleString.cpp)
+add_executable(NameHistory3 NameHistory3.cpp)
+add_executable(NameHistory2 NameHistory2.cpp)
+add_executable(NameHistory1 NameHistory1.cpp)
+add_executable(SortedStrings SortedStrings.cpp)
+add_executable(RegisterIndepSort RegisterIndepSort.cpp)
