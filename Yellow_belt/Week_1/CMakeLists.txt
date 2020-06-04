@@ -1,3 +1,14 @@
 project(Week_1)
 
+set(GCC_COVERAGE_COMPILE_FLAGS "-Wall -Werror --std=c++1z")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}" )
+
 add_executable(Sandbox Sandbox.cpp)
+add_executable(AverageTemp AverageTemp.cpp)
+add_executable(ElementRef ElementRef.cpp)
+add_executable(SqrForContainers SqrForContainers.cpp)
+add_executable(TemplateOutput TemplateOutput.cpp)
+add_executable(TaskTracker TaskTracker.cpp)
+add_executable(RegionBase RegionBase.cpp)
+add_executable(BlocksWeight BlocksWeight.cpp)
+add_executable(White_belt_check White_belt_check.cpp)
