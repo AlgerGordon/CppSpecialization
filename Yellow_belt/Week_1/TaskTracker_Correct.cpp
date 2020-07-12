@@ -8,16 +8,16 @@
 
 using namespace std;
 
-enum class TaskStatus {
-    NEW,          // новая
-    IN_PROGRESS,  // в разработке
-    TESTING,      // на тестировании
-    DONE
-};
+//enum class TaskStatus {
+//    NEW,          // новая
+//    IN_PROGRESS,  // в разработке
+//    TESTING,      // на тестировании
+//    DONE
+//};
 
 // Объявляем тип-синоним для map<TaskStatus, int>,
 // позволяющего хранить количество задач каждого статуса
-using TasksInfo = map<TaskStatus, int>;
+//using TasksInfo = map<TaskStatus, int>;
 
 
 
