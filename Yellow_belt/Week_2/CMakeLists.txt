@@ -1,3 +1,16 @@
 project(Week_2)
 
+set(GCC_COVERAGE_COMPILE_FLAGS "-Wall -Werror --std=c++1z")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}" )
+
 add_executable(Sandbox Sandbox.cpp)
+add_executable(BusScheduleDecomp BusScheduleDecomp.cpp)
+add_executable(AuthorsBusSchedule AuthorsBusSchedule.cpp)
+add_executable(QuadEquationUT QuadEquationUT.cpp)
+add_executable(AuthorsUTFramework AuthorsUTFramework.cpp)
+add_executable(SynonymsUT SynonymsUT.cpp)
+add_executable(AssertBasedUT AssertBasedUT.cpp)
+add_executable(IsPalindromUT IsPalindromUT.cpp)
+add_executable(RationalUT RationalUT.cpp)
+add_executable(PersonUT PersonUT.cpp)
+add_executable(QuadEquationDecomp QuadEquationDecomp.cpp)
