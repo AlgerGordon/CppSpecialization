@@ -3,7 +3,7 @@
 //
 #pragma once
 
-#include "TestRunner.h"
+#include "../../TestRunner/TestRunner.h"
 #include "Synonyms.h"
 
 // Interface

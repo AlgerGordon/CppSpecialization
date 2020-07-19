@@ -2,17 +2,13 @@
 // Created by General on 11.05.2020.
 //
 
-
-
-#include <exception>
 #include <iostream>
-#include <vector>
 
 using namespace std;
 //comment
 
-#include "Synonyms.h"
-#include "SynonymsUT.h"
+#include "synonyms/Synonyms.h"
+#include "synonyms/SynonymsUT.h"
 
 
 int main() {
