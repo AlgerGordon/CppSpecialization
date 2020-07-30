@@ -25,7 +25,7 @@ ostream& operator << (ostream& os, const Lang& lang)
 template <typename K, typename V>
 ostream& operator << (ostream& os, pair<K,V> item)
 {
-    os << item.first << ' ' << item.second;
+    os << item.first << '/' << item.second;
     return os;
 }
 
