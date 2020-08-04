@@ -8,6 +8,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include "../../MyPrint/MyPrint.h"
 
 using namespace std;
 
@@ -19,13 +20,6 @@ struct Lang {
 ostream& operator << (ostream& os, const Lang& lang)
 {
     os << lang.name << " " << lang.age << endl;
-    return os;
-}
-
-template <typename K, typename V>
-ostream& operator << (ostream& os, pair<K,V> item)
-{
-    os << item.first << ' ' << item.second;
     return os;
 }
 
@@ -53,7 +47,7 @@ int main() {
 
 
 
-//    First video
+//    First video: container methods
 //
 //    vector<string> langs = {
 //            "Python", "C++", "C", "Java", "C#"
@@ -63,7 +57,7 @@ int main() {
 //    langs.insert(langs.begin(),"C++");
 //    PrintRange(langs.begin(), langs.end());
 
-//    Second video
+//    Second video: using iters in std algs
 //
 //    vector<string> langs = {
 //            "Python", "C++", "C", "Java", "C#"
@@ -80,7 +74,10 @@ int main() {
 //    langs = {
 //            "Python", "C++", "C++", "Java", "C++"
 //    };
-//    auto it = unique(begin(langs), end(langs)); // удаление подряд идущих повторов
+    // Eliminates all except the first element from every consecutive group
+    // of equivalent elements from the range [first, last) and returns
+    // a past-the-end iterator for the new logical end of the range.
+//    auto it = unique(begin(langs), end(langs));
 //    langs.erase(it, end(langs));
 //    PrintRange(begin(langs), end(langs));
 //
@@ -137,23 +134,23 @@ int main() {
 
     // The same idea with partition, but copies only necessary items.
     // DOESN'T CHANGE CONTAINER SIZE, turns false elements to '' (emptiness)
-    // Return "end" iterator of "new" container with spaces
-//    vector<string> c_langs(langs.size());  // C_LANGS !!!! not langs
-//    auto it_copy = copy_if(begin(langs), end(langs), begin(c_langs),
-//                      [](const string &lang) {
-//                          return lang[0] == 'C';
-//                      });
-//    PrintRange(begin(c_langs), end(c_langs), ',');
-//    c_langs.erase(it_copy, end(c_langs));
-//    cout << endl;
-//    PrintRange(begin(c_langs), end(c_langs), ',');
+    // Return "end" iterator of the "new" container with spaces
+    vector<string> c_langs(langs.size());  // C_LANGS !!!! not langs
+    auto it_copy = copy_if(begin(langs), end(langs), begin(c_langs),
+                      [](const string &lang) {
+                          return lang[0] == 'C';
+                      });
+    PrintRange(begin(c_langs), end(c_langs), ',');
+    c_langs.erase(it_copy, end(c_langs));
+    cout << endl;
+    PrintRange(begin(c_langs), end(c_langs), ',');
 
-    set<int> a = {1, 8 ,3};
-    set<int> b = {3, 6, 8};
-    vector<int> v(a.size());
-    auto it_set = set_intersection(begin(a), begin(b),
-                                   begin(b), end(b), begin(v));
-    PrintRange(begin(v), it_set);
+//    set<int> a = {1, 8 ,3};
+//    set<int> b = {3, 6, 8};
+//    vector<int> v(a.size());
+//    auto it_set = set_intersection(begin(a), begin(b),
+//                                   begin(b), end(b), begin(v));
+//    PrintRange(begin(v), it_set);
 
 
     return 0;
