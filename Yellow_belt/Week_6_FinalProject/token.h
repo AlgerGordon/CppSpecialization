@@ -7,6 +7,7 @@
 
 #include <sstream>
 #include <vector>
+
 using namespace std;
 
 enum class TokenType {
@@ -24,4 +25,17 @@ struct Token {
     const TokenType type;
 };
 
+enum class Comparison {
+    Less,
+    LessOrEqual,
+    Greater,
+    GreaterOrEqual,
+    Equal,
+    NotEqual
+};
+
+enum class LogicalOperation {
+    Or,
+    And
+};
 vector<Token> Tokenize(istream& cl);

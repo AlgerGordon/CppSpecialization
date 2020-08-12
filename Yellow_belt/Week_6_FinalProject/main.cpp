@@ -4,10 +4,9 @@
 
 
 #include "database.h"
-#include "date.h"
 #include "condition_parser.h"
-#include "node.h"
-#include "test_runner.h"
+//#include "test_runner.h"
+//#include "my_print.h"
 
 #include <iostream>
 #include <stdexcept>
@@ -15,13 +14,21 @@
 using namespace std;
 
 string ParseEvent(istream& is) {
-    
+    string event;
+    is >> ws;
+    getline(is, event);
+    return event;
 }
 
-void TestAll();
+ostream& operator << (ostream& os, const pair<const Date, const string&>& item) {
+    os << item.first << ' ' << item.second;
+    return os;
+}
+
+// void TestAll();
 
 int main() {
-    TestAll();
+    //TestAll();
 
     Database db;
 
@@ -69,27 +76,27 @@ int main() {
 
     return 0;
 }
-
-void TestParseEvent() {
-    {
-        istringstream is("event");
-        AssertEqual(ParseEvent(is), "event", "Parse event without leading spaces");
-    }
-    {
-        istringstream is("   sport event ");
-        AssertEqual(ParseEvent(is), "sport event ", "Parse event with leading spaces");
-    }
-    {
-        istringstream is("  first event  \n  second event");
-        vector<string> events;
-        events.push_back(ParseEvent(is));
-        events.push_back(ParseEvent(is));
-        AssertEqual(events, vector<string>{"first event  ", "second event"}, "Parse multiple events");
-    }
-}
-
-void TestAll() {
-    TestRunner tr;
-    tr.RunTest(TestParseEvent, "TestParseEvent");
-    tr.RunTest(TestParseCondition, "TestParseCondition");
-}
+//
+//void TestParseEvent() {
+//    {
+//        istringstream is("event");
+//        AssertEqual(ParseEvent(is), "event", "Parse event without leading spaces");
+//    }
+//    {
+//        istringstream is("   sport event ");
+//        AssertEqual(ParseEvent(is), "sport event ", "Parse event with leading spaces");
+//    }
+//    {
+//        istringstream is("  first event  \n  second event");
+//        vector<string> events;
+//        events.push_back(ParseEvent(is));
+//        events.push_back(ParseEvent(is));
+//        AssertEqual(events, vector<string>{"first event  ", "second event"}, "Parse multiple events");
+//    }
+//}
+//
+//void TestAll() {
+//    TestRunner tr;
+//    tr.RunTest(TestParseEvent, "TestParseEvent");
+//    tr.RunTest(TestParseCondition, "TestParseCondition");
+//}

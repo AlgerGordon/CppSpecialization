@@ -3,7 +3,8 @@
 //
 
 #include "condition_parser.h"
-#include "../TestRunner/Test_runner.h"
+#include "token.h"
+#include "test_runner.h"
 
 #include <sstream>
 using namespace std;
