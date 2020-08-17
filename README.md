@@ -1,5 +1,5 @@
-# CppSpecialization
-Coursera  cpp specialization
+# Yandex CppSpecialization
+Coursera cpp specialization
 
 ## Courses order:
 
