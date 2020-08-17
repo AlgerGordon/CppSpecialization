@@ -2,7 +2,6 @@
 Coursera  cpp specialization
 
 ## Courses order:
-_____
 
 1) White belt 
 2) Yellow belt
