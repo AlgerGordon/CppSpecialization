@@ -130,8 +130,8 @@ public:
     int Denominator() const{
         return denominator;
     }
-    void SetNumerator(int new_numenator){
-        numerator = new_numenator;
+    void SetNumerator(int new_numerator){
+        numerator = new_numerator;
     }
     void SetDenominator(int new_denominator) {
         denominator = new_denominator;
