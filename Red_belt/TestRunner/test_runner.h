@@ -8,25 +8,27 @@
 #include <set>
 #include <map>
 #include <string>
+#include <string.h>
 #include <sstream>
 
 #include "MyPrint.h"
 
 using namespace std;
 
-#define AS_KV(x) #x << " = " << x
+#define __FILENAME__ (strrchr(__FILE__, '\\') ? strrchr(__FILE__, '\\') + 1 : __FILE__)
+#define AS_KV(x) (#x) << " = " << (x)
 #define RUN_TEST(tr, func) tr.RunTest(func, #func)
-#define ASSERT_EQUAL(x, y) {                \
-    ostringstream os;                       \
-    os << #x << " != " << #y << ", "        \
-        << __FILE__ << ":" << __LINE__;     \
-    AssertEqual(x, y, os.str());            \
+#define ASSERT_EQUAL(x, y) {                                        \
+    ostringstream __assert_equal_private_os;                        \
+    __assert_equal_private_os << #x << " != " << #y << ", "         \
+        << __FILENAME__ << ":" << __LINE__;                         \
+    AssertEqual(x, y, __assert_equal_private_os.str());             \
 }
-#define ASSERT(x, y) {                      \
-    ostringstream os;                       \
-    os << #x << " is false" << ", "         \
-        << __FILE__ << ":" << __LINE__;     \
-    Assert(x, os.str());                    \
+#define ASSERT(x, y) {                                              \
+    ostringstream __assert_equal_private_os;                        \
+    __assert_equal_private_os << #x << " is false" << ", "          \
+        << __FILE__ << ":" << __LINE__;                             \
+    Assert(x, __assert_equal_private_os.str());                     \
 }
 
 template <class T, class U>
@@ -47,8 +49,8 @@ template <class T, class U>
 void AssertEqual(const T& t, const U& u, const string& hint) {
     if (!(t == u)) {
         ostringstream  os;
-        os << "Assertion failed: " << AS_KV(t) << " != " << AS_KV(u) << " "
-           << "Hint: " << hint;
+        os << "Assertion failed: " << endl<< AS_KV(t) << " != " << endl << AS_KV(u)
+            << endl << "Hint: " << hint;
         throw runtime_error(os.str());
     }
 }
