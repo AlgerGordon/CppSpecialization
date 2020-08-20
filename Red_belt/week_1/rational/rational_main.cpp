@@ -3,7 +3,7 @@
 //
 
 
-#include "Rational.h"
+#include "rational.h"
 
 using namespace std;
 

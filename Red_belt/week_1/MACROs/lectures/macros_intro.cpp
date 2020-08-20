@@ -2,7 +2,7 @@
 // Created by General on 14.08.2020.
 //
 
-// TestRunner improvement
+// test_runner improvement
 // Ex: displaying error file and string
 // Ex: displaying error arguments to avoid 1 != 0
 

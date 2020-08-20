@@ -34467,7 +34467,7 @@ namespace std
 # 828 "C:/dev/mingw64/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/sstream" 2 3
 # 13 "test_runner.h" 2
 
-# 1 "MyPrint.h" 1
+# 1 "my_print.h" 1
 
 
 
@@ -38463,12 +38463,12 @@ namespace std
 
 }
 # 70 "C:/dev/mingw64/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/vector" 2 3
-# 8 "MyPrint.h" 2
+# 8 "my_print.h" 2
 
 
 
 
-# 11 "MyPrint.h"
+# 11 "my_print.h"
 using namespace std;
 
 template<class T>

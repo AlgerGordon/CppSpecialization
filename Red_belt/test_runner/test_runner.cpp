@@ -4,10 +4,6 @@
 
 #include "test_runner.h"
 
-inline void Assert(bool b, const string& hint) {
-    AssertEqual(b,true, hint);
-}
-
 TestRunner::~TestRunner() {
     if (fail_count > 0) {
         cerr << fail_count << " test failed. Terminate";

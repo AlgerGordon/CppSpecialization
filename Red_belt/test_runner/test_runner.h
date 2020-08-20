@@ -11,7 +11,7 @@
 #include <string.h>
 #include <sstream>
 
-#include "MyPrint.h"
+#include "my_print.h"
 
 using namespace std;
 
@@ -24,7 +24,7 @@ using namespace std;
         << __FILENAME__ << ":" << __LINE__;                         \
     AssertEqual(x, y, __assert_equal_private_os.str());             \
 }
-#define ASSERT(x, y) {                                              \
+#define ASSERT(x) {                                                 \
     ostringstream __assert_equal_private_os;                        \
     __assert_equal_private_os << #x << " is false" << ", "          \
         << __FILE__ << ":" << __LINE__;                             \
@@ -33,7 +33,9 @@ using namespace std;
 
 template <class T, class U>
 void AssertEqual(const T& t, const U& u, const string& hint);
-void Assert(bool b, const string& hint);
+inline void Assert(bool b, const string& hint) {
+    AssertEqual(b,true, hint);
+}
 
 class TestRunner {
 public:

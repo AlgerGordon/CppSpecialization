@@ -2,7 +2,7 @@
 // Created by General on 27.06.2020.
 //
 
-#include "Rational.h"
+#include "rational.h"
 
 int GCD(int a, int b) {
     while (a > 0 && b > 0) {

@@ -2,7 +2,7 @@
 // Created by General on 14.08.2020.
 //
 
-#include "Rational.h"
+#include "rational.h"
 
 void TestAll() {
     TestRunner tr;
