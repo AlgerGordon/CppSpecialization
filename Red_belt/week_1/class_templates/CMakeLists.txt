@@ -1,8 +1,8 @@
 
-add_executable(1_class_templates lectures/1_class_templates.cpp)
-add_executable(2_generating_functions lectures/2_generating_functions.cpp)
-add_executable(3_cpp17_features lectures/3_cpp17_features.cpp)
-add_executable(4_auto_gener_returned_type lectures/4_auto_gener_returned_type.cpp)
+add_executable(1_class_templates lectures/0_class_templates.cpp)
+add_executable(2_generating_functions lectures/1_generating_functions.cpp)
+add_executable(3_cpp17_features lectures/2_cpp17_features.cpp)
+add_executable(4_auto_gener_returned_type lectures/3_auto_gener_returned_type.cpp)
 
 add_executable(table table.cpp)
 target_link_libraries(table test_runner)
