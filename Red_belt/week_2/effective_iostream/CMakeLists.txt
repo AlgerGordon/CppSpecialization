@@ -1,0 +1,3 @@
+
+add_executable(iostream_buffering iostream_buffering.cpp)
+target_link_libraries(iostream_buffering profile)

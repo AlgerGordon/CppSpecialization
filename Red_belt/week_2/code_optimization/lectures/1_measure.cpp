@@ -7,18 +7,20 @@
 #include <fstream>
 #include <set>
 
-#include "../profile/profile.h"
+#include <profile.h>
 
 using namespace std;
-
 
 
 int main() {
     LOG_DURATION("Total");
 
-    ifstream in("..\\lectures\\input.txt");
+    // This path start in an appropriate cmake-debug-build directory
+    // I have just copied it
+    ifstream in("measure_input.txt");
     int element_count;
     in >> element_count;
+    cout << element_count << endl;
 
     set<int> elements;
     {
