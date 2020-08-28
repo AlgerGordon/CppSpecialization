@@ -78,7 +78,7 @@ int main() {
 //        }
 //    }
 
-    // cin.tie(nullptr)
+    cin.tie(nullptr);
     cout << "Enter two integers: ";
     int x, y;
     // cout and cerr linked with cin
