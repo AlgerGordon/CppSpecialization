@@ -15,3 +15,4 @@ add_subdirectory(week_6_FinalProject)
 
 add_subdirectory(test_runner)
 add_subdirectory(profile)
+add_subdirectory(my_print)
